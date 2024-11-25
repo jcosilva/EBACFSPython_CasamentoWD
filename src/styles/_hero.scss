@@ -1,0 +1,40 @@
+@use 'variables';
+
+.hero {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-image: url("../images/heart.jpg");
+    background-repeat: no repeat;
+    background-size: cover;
+    position: relative;
+    
+    .container {
+        position: relative;
+    }
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$TextColorSecondary;
+        content: '';
+        opacity: 70%;
+    }
+
+    &__text {
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    @media(max-width: 640px) {
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}

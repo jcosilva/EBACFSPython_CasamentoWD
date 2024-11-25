@@ -1,0 +1,72 @@
+@use 'variables';
+
+.event {
+    padding: 40px;
+
+    &--start {
+        background-color: variables.$Grad1Start;
+    }
+
+    &--topic-01 {
+        background-image: linear-gradient(variables.$Grad1Start, variables.$Grad1End);
+    }
+
+    &--topic-02 {
+        background-image: linear-gradient(variables.$Grad2Start, variables.$Grad2End);
+    }
+
+    &--topic-03 {
+        background-image: linear-gradient(variables.$Grad3Start, variables.$Grad3End);
+    }
+
+    &--topic-04 {
+        background-image: linear-gradient(variables.$Grad4Start, variables.$Grad4End);
+    }
+
+    &--finish {
+        background-color: variables.$Grad4End;
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__image {
+        max-width: 360px;
+    }
+
+    &__detail {
+        &__title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    @media(max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            max-width: 100%;
+        }
+
+        &__detail {
+            margin-right: 0px;
+            margin-bottom: 16px;
+        }
+    }
+}
